@@ -7,6 +7,12 @@ $(document).ready(() => {
     Trackster.searchTracksByTitle($search);
   });
 
+  $('#search').keydown(function(e){
+    if(e.which == 13){//Enter key pressed
+        $('#search-button').click();//Trigger search button click event
+    }
+  });
+
   /*
     Given an array of track data, create the HTML for a Bootstrap row for each.
     Append each "row" to the container in the body to display all tracks.
@@ -33,7 +39,7 @@ $(document).ready(() => {
   Trackster.searchTracksByTitle = function(title) {
     var key = 'a4f271700c22982fae8954645260c522';
     $.ajax({
-      url: 'http://ws.audioscrobbler.com/2.0/?method=track.search&track=' + title + '&api_key=' + key + '&format=json',
+      url: 'https://ws.audioscrobbler.com/2.0/?method=track.search&track=' + title + '&api_key=' + key + '&format=json',
       datatype: 'jsonp',
       success: function(data) {
         Trackster.renderTracks(data.results.trackmatches.track);
