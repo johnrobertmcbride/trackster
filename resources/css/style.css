@@ -52,12 +52,12 @@ p {
   border: 1px solid rgb(204, 204, 204);
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 575px) {
   .desktop {
     display: none;
   }
 
   h1 {
-    font-size: 2rem;
+    margin-bottom: 15px;
   }
 }
