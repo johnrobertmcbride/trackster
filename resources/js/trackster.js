@@ -21,7 +21,7 @@ $(document).ready(() => {
       var artistname = tracks[i].artist;
       var artwork = tracks[i].image[1]["#text"]
       var popularity = tracks[i].listeners;
-      var $trackhtml = $('<div class="row"><div class="col-sm-1"><p><a href="' + trackurl + '"><i class="fas fa-play-circle"></a></i></p></div><div class="col-sm-4"><p>' + trackname + '</p></div><div class="col-sm-3"><p>' + artistname + '</p></div><div class="col-sm-2"><p><img src="' + artwork + '"></p></div><div class="col-sm-2"><p>' + popularity + '</p></div></div>')
+      var $trackhtml = $('<div class="row"><div class="col-1"><p><a href="' + trackurl + '"><i class="fas fa-play-circle"></a></i></p></div><div class="col-4"><p>' + trackname + '</p></div><div class="col-3"><p>' + artistname + '</p></div><div class="col-2"><p><img src="' + artwork + '"></p></div><div class="col-2 desktop"><p>' + popularity + '</p></div></div>')
       $trackcontainer.append($trackhtml);
     }
   };

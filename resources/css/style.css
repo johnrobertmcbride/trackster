@@ -51,3 +51,13 @@ p {
 .bor {
   border: 1px solid rgb(204, 204, 204);
 }
+
+@media only screen and (max-width: 550px) {
+  .desktop {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
